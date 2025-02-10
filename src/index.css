@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Cut&family=Tulpen+One&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nova_cut {
+  font-family: "Nova Cut", serif;
+  font-style: normal;
+}
+
+.tulpen_one {
+  font-family: "Tulpen One", serif;
+  font-style: normal;
+}
+.mask {
+  mask-image: url("./assets/images/mask.svg");
+  background-color: red;
+  mask-size: 40px;
+  mask-repeat: no-repeat;
+  color: black;
+}
+.hover_animation::before {
+  content: " ";
+  position: absolute;
+  height: 100%;
+  background-color: aqua;
+}
+.circle-grandient {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ad00fe 0%, #00e0ee 100%);
+  opacity: 0.15;
+  filter: blur(137.6px);
+  animation: gradientAnimation 20s ease-in-out infinite;
+}
+header {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, #ad00fe 0%, #00e0ee 100%);
+}
+header::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(45deg, #ad00fe 0%, #00e0ee 100%);
+  width: 120px;
+  height: 2px;
+  animation: borderflash 18s ease-in 2.1s infinite;
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
+  left: -20%;
+  bottom: 0;
+}
+@keyframes borderflash {
+  0% {
+    left: -20%;
+  }
+  20%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    transform: translate(60vw, -120%); /* Top-right */
+  }
+  25% {
+    transform: translate(60vw, 0%); /* Bottom-right */
+  }
+  50% {
+    transform: translate(-30vw, 0%); /* Bottom-left */
+  }
+  75% {
+    transform: translate(-30vw, -120%); /* Top-left */
+  }
+  100% {
+    transform: translate(60vw, -120%); /* Back to Top-right */
+  }
+}
