@@ -1,5 +1,6 @@
 import Company from "./Company";
 import google_logo from "../assets/images/google-logo.png";
+import { useRefContext } from "../context/RefContext";
 const companies = [
   {
     position: "Lead Software Engineer at Google",
@@ -17,8 +18,10 @@ const companies = [
   },
 ];
 function Expriences() {
+  const { experienceRef } = useRefContext();
+
   return (
-    <section className="py-20">
+    <section ref={experienceRef} className="py-20">
       <div className="flex flex-col items-center gap-14">
         <h3 className="text-[1.8rem] md:text-[2.18rem] font-extrabold leading-[35.7px] bg-gradient-to-b from-[#5BADFF] from-[0%] to-[#1373D1]  bg-clip-text text-transparent uppercase">
           Experience

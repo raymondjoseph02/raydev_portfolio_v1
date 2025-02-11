@@ -74,7 +74,7 @@ const ExperienceWith = () => {
           initial={{ y: 50 }}
           animate={isActive ? { y: 0 } : { y: 50 }}
           transition={{ type: "spring", damping: 9 }}
-          className={` text-lg md:text-xl ${
+          className={` text-lg md:text-xl nova_cut ${
             isHoverTool === "javascript"
               ? "text-[#F0DB4F]"
               : isHoverTool === "React"
@@ -94,7 +94,6 @@ const ExperienceWith = () => {
         </motion.h3>
       </div>
       <div className="flex gap-5 md:gap-12 lg:gap-20">
-        <div></div>
         {tools.map((tool, i) => (
           <div
             onMouseEnter={() => handleOnHover(tool.name)}

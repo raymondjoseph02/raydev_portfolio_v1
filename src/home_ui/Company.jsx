@@ -21,7 +21,7 @@ const Company = ({ logo, description, position, duration }) => {
         </div>
         <motion.p
           initial={{
-            y: -30,
+            y: -15,
             opacity: 0,
           }}
           whileInView={{

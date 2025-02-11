@@ -25,7 +25,7 @@ const ProjectCard = () => {
       <div>
         <img src={pay4me_cover} alt="Pay4Me Cover" />
       </div>
-      <div className="px-6 py-3 flex justify-between items-center">
+      <div className="px-6 py-3 flex justify-between items-center hover:bg-gradient-to-r group from-[#ad00fe] to-[#00e0ee] transition-colors ease-linear duration-500 cursor-pointer ">
         <div>
           <p className="text-[#C5C5C5] text-[0.6rem] leading-[19px]">
             CLICK HERE TO VISIT
@@ -35,7 +35,7 @@ const ProjectCard = () => {
           </p>
         </div>
         <div>
-          <FaArrowRight className="text-white -rotate-45 hover:rotate-[5deg] transition-transform ease-linear duration-100" />
+          <FaArrowRight className="text-white -rotate-45 group-hover:rotate-[5deg] transition-transform ease-linear duration-100" />
         </div>
       </div>
     </motion.div>

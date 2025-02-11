@@ -3,33 +3,55 @@ import ExperienceWith from "./ExperienceWith";
 import { useMousePosition } from "../utils/useMousePosition";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
+import { useRefContext } from "../context/RefContext";
 const HeroSection = () => {
   const [isHover, setIsHover] = useState(false);
   const maskRef = useRef(HTMLParagraphElement);
   const maskSize = isHover ? 200 : 40;
   const { x, y } = useMousePosition(maskRef);
-
+  const { heroRef } = useRefContext();
   return (
-    <section className="pt-72  pb-40">
+    <section ref={heroRef} className="md:pt-72 pt-40 pb-40">
       <div className="flex flex-col gap-16 md:gap-24">
         <div className="flex justify-center flex-col items-center gap-10">
           <div className="flex flex-col items-center justify-center gap-5  lg:w-[67ch]">
             <div className="size-28 rounded-full bg-orange-400">
               <img src="" alt="" />
             </div>
-            <h1 className="lg:text-[3.43rem] text-3xl font-extrabold md:text-[2.43rem] md:font-bold lg:font-extrabold text-white text-center leading-normal">
-              I do code and make content{" "}
-              <span className="bg-gradient-to-r  from-[#FF8660] to-[#9A33FF] bg-clip-text text-transparent">
-                about it!
-              </span>
-            </h1>
-            <div className="relative">
-              <p className="text-[#C5C5C5] text-base md:text-lg font-light text-center">
-                I am a seasoned full-stack software engineer with over 8 years
-                of professional experience, specializing in backend development.
-                My expertise lies in crafting robust and scalable SaaS-based
-                architectures on the Amazon AWS platform.
+            <motion.div
+              initial={{
+                x: 150,
+                opacity: 0,
+              }}
+              animate={{
+                x: 0,
+                opacity: 1,
+              }}
+              transition={{ ease: "easeInOut", duration: 0.6 }}
+              className="text-center"
+            >
+              <p className="text-lg md:text-xl text-white font-semibold">
+                <span>Hi i&#39;m Raymond Joseph</span>
               </p>
+              <motion.h1 className="capitalize lg:text-[3.43rem] text-3xl font-extrabold md:text-[2.43rem] md:font-bold lg:font-extrabold text-white text-center leading-normal">
+                Front-end
+                <span className="bg-gradient-to-r  from-[#FF8660] to-[#9A33FF] bg-clip-text text-transparent">
+                  {" "}
+                  &#123; developer &#125;
+                </span>
+              </motion.h1>
+            </motion.div>
+            <div className="relative">
+              <motion.p
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.6, ease: "easeInOut" }}
+                className="text-[#C5C5C5] text-base md:text-lg  text-center nova_cut font-light"
+              >
+                As a Frontend Developer, I prioritize precision in design,
+                ensuring pixel-perfect alignment and seamless user interactions
+                while optimizing components for enhanced performance.
+              </motion.p>
               <motion.p
                 ref={maskRef}
                 initial={{
@@ -55,11 +77,17 @@ const HeroSection = () => {
             </div>
           </div>
           <div className=" flex-col md:flex-row gap-3 flex">
-            <div>
+            <a href="mailto:amraymondjoseph@gmail.com">
               <PrimaryBtn buttonType="getInTouchBtn" />
-            </div>
+            </a>
             <div>
-              <PrimaryBtn buttonType="downloadCvBtn" />
+              <a
+                target="_blank"
+                href="https://docs.google.com/document/d/15nqiZovoI_GUGg3iSMzxOjE52pcdPjNFEUCBhhBqMaY/edit?usp=sharing"
+                download={"Raydev CV"}
+              >
+                <PrimaryBtn buttonType="downloadCvBtn" />
+              </a>
             </div>
           </div>
         </div>

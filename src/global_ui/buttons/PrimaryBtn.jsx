@@ -20,11 +20,13 @@ const PrimaryBtn = ({ buttonType }) => {
     getInTouchBtn: {
       text: "Get In Touch",
       classes: "bg-[#FFFFFF] text-[#161513] border-[0.32px] border-[#ffffff]",
+      action: () => {},
     },
     downloadCvBtn: {
       text: "Download CV",
       classes:
         "bg-[#000000] text-[#FFFFFF] border-[2px] border-[#ffffff] relative overflow-hidden",
+      link: "https://docs.google.com/document/d/15nqiZovoI_GUGg3iSMzxOjE52pcdPjNFEUCBhhBqMaY/edit?tab=t.0",
     },
   };
   const { text, classes } = btnType[buttonType];
@@ -54,7 +56,7 @@ const PrimaryBtn = ({ buttonType }) => {
             originX: origin.x,
             originY: origin.y,
           }}
-          className="absolute inset-0 w-full h-full bg-gradient-to-t from-red-200 to-red-400 z-0"
+          className="absolute inset-0 w-full h-full bg-gradient-to-t from-[#ad00fe] to-[#00e0ee] z-0"
         />
       )}
     </motion.button>
