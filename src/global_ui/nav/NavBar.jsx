@@ -5,8 +5,8 @@ const NavBar = () => {
   const { links, activeLink, isNavOpen, setIsNavOpen } = useRefContext();
 
   return (
-    <header className=" fixed w-screen z-[999] drop-shadow-lg min-h-10 flex items-center justify-center py-2 ">
-      <nav className="flex w-full md:w-[70%] justify-between items-center px-4 md:px-0">
+    <header className=" fixed w-screen z-[999] drop-shadow-lg min-h-10 flex items-center justify-center py-2 bg-[#27272A]">
+      <nav className="flex w-full md:w-[70%] justify-between items-center px-4 md:px-0 ">
         <a
           href="/"
           className="text-2xl tulpen_one text-white font-semibold rounded-full p-4 border-[#4b4848] border"

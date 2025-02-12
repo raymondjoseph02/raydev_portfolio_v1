@@ -18,44 +18,44 @@ const ExperienceWith = () => {
     {
       name: "javascript",
       icon: (
-        <FaJs className="text-[#90908F] size-[2.93rem] md:size-[3.4rem] hover:text-[#F0DB4F] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
+        <FaJs className="text-[#90908F] size-[2.93rem] md:size-[3rem] hover:text-[#F0DB4F] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
       ),
     },
     {
       name: "React",
       icon: (
-        <FaReact className="text-[#90908F] size-[2.93rem] md:size-[3.4rem] hover:text-[#61DBFB] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
+        <FaReact className="text-[#90908F] size-[2.93rem] md:size-[3rem] hover:text-[#61DBFB] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
       ),
     },
     {
       name: "Node",
       icon: (
-        <FaNode className="text-[#90908F] size-[2.93rem] md:size-[3.4rem] hover:text-[#68A063] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
+        <FaNode className="text-[#90908F] size-[2.93rem] md:size-[3rem] hover:text-[#68A063] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
       ),
     },
     {
       name: "Html",
       icon: (
-        <FaHtml5 className="text-[#90908F] size-[2.93rem] md:size-[3.4rem] hover:text-[#e34c26] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
+        <FaHtml5 className="text-[#90908F] size-[2.93rem] md:size-[3rem] hover:text-[#e34c26] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
       ),
     },
 
     {
       name: "Tailwind css",
       icon: (
-        <RiTailwindCssFill className="text-[#90908F] size-[2.93rem] md:size-[3.4rem] hover:text-[#06b6d4] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
+        <RiTailwindCssFill className="text-[#90908F] size-[2.93rem] md:size-[3rem] hover:text-[#06b6d4] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
       ),
     },
     {
       name: "Framer Motion",
       icon: (
-        <PiFramerLogoFill className="text-[#90908F] size-[2.93rem] md:size-[3.4rem] hover:text-[#F0DB4F] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
+        <PiFramerLogoFill className="text-[#90908F] size-[2.93rem] md:size-[3rem] hover:text-[#F0DB4F] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
       ),
     },
     {
       name: "Typescript",
       icon: (
-        <SiTypescript className="text-[#90908F] size-[2.93rem] md:size-[3.4rem] hover:text-[#007acc] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
+        <SiTypescript className="text-[#90908F] size-[2.93rem] md:size-[3rem] hover:text-[#007acc] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
       ),
     },
   ];
@@ -93,14 +93,16 @@ const ExperienceWith = () => {
           {isHoverTool}
         </motion.h3>
       </div>
-      <div className="flex gap-5 md:gap-12 lg:gap-20 flex-wrap items-center justify-center">
+      <div className="flex gap-5 md:gap-12 lg:gap-16 flex-wrap items-center justify-center">
         {tools.map((tool, i) => (
           <div
             onMouseEnter={() => handleOnHover(tool.name)}
             onMouseLeave={handleOnMouseLeave}
             key={i}
+            className="flex flex-col items-center justify-center"
           >
             {tool.icon}
+            <p className="text-[#ffffff] capitalize">{tool.name}</p>
           </div>
         ))}
       </div>

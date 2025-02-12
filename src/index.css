@@ -39,7 +39,6 @@ header {
   position: relative;
   /* overflow-y: hidden; */
   /* overflow-x: hidden; */
-  background: linear-gradient(45deg, #ad00fe 0%, #00e0ee 100%);
 }
 header::before {
   content: "";
