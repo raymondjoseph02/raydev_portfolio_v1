@@ -55,13 +55,25 @@ function Footer() {
           </div>
         </div>
         <div className="flex gap-6 md:gap-8 ">
-          <a href="www.google.com" className="group cursor-pointer">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/raydev02"
+            className="group cursor-pointer"
+          >
             <FaLinkedin className="text-white size-6 md:size-7 group-hover:text-[#31a5f3]  transition-colors duration-200 ease-linear" />
           </a>
-          <a href="/" className="group cursor-pointer">
+          <a
+            target="_blank"
+            href="http://twitter.com/Raydev02"
+            className="group cursor-pointer"
+          >
             <FaXTwitter className="text-white size-6 md:size-7 group-hover:text-[#31a5f3] transition-colors duration-200 ease-linear" />
           </a>
-          <a href="/" className="cursor-pointer group">
+          <a
+            target="_blank"
+            href="http://github.com/raymondjoseph02"
+            className="cursor-pointer group"
+          >
             <FaGithub className="text-white size-6 md:size-7 group-hover:text-[#31a5f3] transition-colors duration-200 ease-linear" />
           </a>
         </div>

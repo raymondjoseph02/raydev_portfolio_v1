@@ -93,7 +93,7 @@ const ExperienceWith = () => {
           {isHoverTool}
         </motion.h3>
       </div>
-      <div className="flex gap-5 md:gap-12 lg:gap-20">
+      <div className="flex gap-5 md:gap-12 lg:gap-20 flex-wrap items-center justify-center">
         {tools.map((tool, i) => (
           <div
             onMouseEnter={() => handleOnHover(tool.name)}

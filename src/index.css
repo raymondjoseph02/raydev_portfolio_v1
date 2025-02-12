@@ -37,7 +37,8 @@
 }
 header {
   position: relative;
-  overflow: hidden;
+  /* overflow-y: hidden; */
+  /* overflow-x: hidden; */
   background: linear-gradient(45deg, #ad00fe 0%, #00e0ee 100%);
 }
 header::before {
@@ -47,17 +48,17 @@ header::before {
   width: 120px;
   height: 2px;
   animation: borderflash 18s ease-in 2.1s infinite;
-  animation: name duration timing-function delay iteration-count direction
-    fill-mode;
   left: -20%;
   bottom: 0;
 }
 @keyframes borderflash {
   0% {
     left: -20%;
+    display: none;
   }
   20%,
   100% {
+    display: flex;
     left: 100%;
   }
 }
