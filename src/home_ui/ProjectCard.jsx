@@ -1,4 +1,3 @@
-import pay4me_cover from "../assets/images/Pay4me Cover.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { FaGithub } from "react-icons/fa6";
