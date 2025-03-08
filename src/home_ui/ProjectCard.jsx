@@ -37,7 +37,7 @@ const ProjectCard = ({
         />
       </div>
 
-      <div className="px-8 py-10 basis-1/2 space-y-10">
+      <div className="px-4 md:px-8 py-10 basis-1/2 space-y-10">
         <div className="space-y-6">
           <h4 className="sm:text-2xl lg:text-3xl sm:font-semibold lg:font-bold text-white">
             {title}
@@ -46,14 +46,14 @@ const ProjectCard = ({
         </div>
 
         <div className="space-y-4">
-          <p className="text-lg font-semibold nova_cut text-[#dcd5d5]">
+          <p className="text-lg font-semibold  text-[#dcd5d5]">
             Technologies used
           </p>
           <div className="flex flex-wrap gap-3 sm:gap-6">
             {techStack.map((tech) => (
               <p
                 key={tech} // Better to use the actual value as key if possible
-                className="py-2 px-4 text-white rounded-md bg-[#ffffff12] shadow-md capitalize nova_cut"
+                className="py-2 px-4 text-white rounded-md bg-[#ffffff12] shadow-md capitalize "
               >
                 {tech}
               </p>
@@ -66,7 +66,7 @@ const ProjectCard = ({
                 href={liveLink}
                 target="_blank"
                 rel="noreferrer"
-                className="text-sm lg:text-base flex gap-3 text-[#000000] bg-[#ffffff] px-2.5 py-1.5 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100"
+                className="text-sm lg:text-base flex gap-3 text-[#000000] bg-[#ffffff] px-2.5 py-1.5 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100 w-full  justify-center md:w-fit"
               >
                 <CiGlobe className="size-5 " />
                 <span>View on Web</span>
@@ -77,7 +77,7 @@ const ProjectCard = ({
                 href={githubLink}
                 target="_blank"
                 rel="noreferrer"
-                className="flex gap-3 text-[#000000] bg-[#ffffff] px-2.5 py-1.5 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100"
+                className="flex gap-3 text-[#000000] bg-[#ffffff] px-2.5 py-1.5 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100 w-full justify-center md:w-fit"
               >
                 <FaGithub className="size-5 " />
                 <span>View on GitHub</span>

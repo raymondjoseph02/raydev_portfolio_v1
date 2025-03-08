@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { FaEnvelope } from "react-icons/fa";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
-import { IoMdCheckmark } from "react-icons/io";
-import { MdContentCopy } from "react-icons/md";
 import { useRefContext } from "../../context/RefContext";
 import { Tooltip } from "@material-tailwind/react";
 // import glow from "../../assets/images/glow.png
@@ -31,7 +29,7 @@ function Footer() {
           <h5 className="text-[1.47rem] font-bold text-white tracking-[2%]">
             Contact
           </h5>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-10">
             <p className="text-[#C5C5C5] tracking-[2%] font-light text-[0.90rem]">
               Creative and Detail-Oriented Front-End Developer with a strong
               focus on user experience and interface design. Passionate about
@@ -46,22 +44,15 @@ function Footer() {
               Motion, GSAP, and Three.js, I aim to create intuitive and
               immersive digital experiences.
             </p>
-            <p className="flex text-[#C5C5C5] text-[0.90rem] font-semibold items-center  gap-2">
-              <FaEnvelope />
-              <span>amraymondjoseph@gmail.com</span>
-              <Tooltip placement="top" content="Copy email to clipboard">
-                <button
-                  className="cursor-pointer p-2 filter backdrop-blur-lg  brightness-110 bg-[#545252] rounded-md hover:brightness-90 transition-all ease-linear duration-300"
-                  onClick={handleCopyToclipBoard}
-                >
-                  {!isCopied ? (
-                    <MdContentCopy className="text-white size-5 " />
-                  ) : (
-                    <IoMdCheckmark className="text-white size-5 " />
-                  )}
-                </button>
-              </Tooltip>
-            </p>
+            <Tooltip placement="top" content="Copy email to clipboard">
+              <button
+                className="cursor-pointer p-2 filter backdrop-blur-lg  brightness-110 bg-transparent text-white border-[#ffffff18] border-2 justify-center w-full sm:w-fit rounded-md hover:brightness-90 transition-all ease-linear duration-300 flex items-center gap-5"
+                onClick={handleCopyToclipBoard}
+              >
+                <FaEnvelope />
+                <span>amraymondjoseph@gmail.com</span>
+              </button>
+            </Tooltip>
           </div>
         </div>
         <div className="flex gap-6 md:gap-8 ">
@@ -96,7 +87,7 @@ function Footer() {
       </div>
       <div className="absolute z-10 circle-grandient " />
       {isCopied ? (
-        <p className="fixed text-lg italic text-white -translate-x-1/2 nova_cut bottom-3 left-1/2 z-100">
+        <p className="fixed text-lg  text-white -translate-x-1/2  bottom-3 left-1/2 z-100">
           copied
         </p>
       ) : null}
