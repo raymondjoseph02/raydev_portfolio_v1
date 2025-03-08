@@ -60,7 +60,14 @@ const HeroSection = () => {
             <ExperienceWith />
           </div>
         </div>
-        <div className="w-full h-10 md:h-20 xl:h-full xl:w-[4%] bg-[#161618] relative z-50"></div>
+        <div
+          className="w-[4%] xl:flex hidden bg-[#161618] relative z-[90]"
+          aria-hidden="true"
+        ></div>
+        <div
+          className="w-full h-20 xl:hidden flex bg-[#161618] relative z-[90]"
+          aria-hidden="true"
+        ></div>
         <div className="xl:h-full h-[26rem] w-full xl:w-[36%]  border-[1px] border-[#f5f4f421] rounded-3xl overflow-hidden ">
           <img
             src={advater}

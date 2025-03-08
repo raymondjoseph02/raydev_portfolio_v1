@@ -8,15 +8,15 @@ const NavBar = () => {
   return (
     <header className=" fixed w-screen z-[999] drop-shadow-lg min-h-10 flex items-center justify-center py-2 bg-[#27272A]  ">
       <nav className="w-full">
-        <div className="container flex items-center justify-between w-full">
+        <div className=" flex items-center justify-between  mx-auto container ">
           <a
             href="/"
             className="text-2xl tulpen_one text-white font-semibold rounded-full p-4 border-[#4b4848] border"
           >
             RJ
           </a>
-          <div className=" hidden md:flex    justify-center">
-            <ul className="flex gap-20 [&-li]:font-bold">
+          <div className="  lg:flex hidden   justify-center">
+            <ul className="flex gap-10 xl:gap-20 [&-li]:font-bold">
               {links.map((link, i) => (
                 <div
                   onClick={() => link.action(link.linkTitle)}
@@ -40,7 +40,7 @@ const NavBar = () => {
               ))}
             </ul>
           </div>
-          <div className="flex gap-6 ">
+          <div className="lg:flex hidden gap-6 ">
             <div>
               <PrimaryBtn buttonType={"downloadCvBtn"}></PrimaryBtn>
             </div>
@@ -49,13 +49,13 @@ const NavBar = () => {
             </div>
           </div>
 
-          <div className="">
+          <div className="flex lg:hidden">
             <button
               onClick={() => setIsNavOpen(!isNavOpen)}
               aria-label="handburger menu"
               className={`relative z-50 w-[24px] flex flex-col ${
                 isNavOpen ? "justify-center " : "justify-between"
-              }  h-[24px] items-end md:hidden`}
+              }  h-[24px] items-end lg:hidden`}
             >
               <motion.span
                 initial={{ width: "100%", rotate: 0 }}

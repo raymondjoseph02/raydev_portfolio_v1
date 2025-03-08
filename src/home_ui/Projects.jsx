@@ -1,6 +1,7 @@
 import { useRefContext } from "../context/RefContext";
 import ProjectCard from "./ProjectCard";
 import { projects } from "../data/project";
+import { FaArrowRight } from "react-icons/fa6";
 
 const Projects = () => {
   const { projectRef } = useRefContext();
@@ -14,10 +15,13 @@ const Projects = () => {
           </h3>
           <a
             target="_blank"
-            href="http://github.com/raymondjoseph02"
-            className="text-green-300 nova_cut text-base font-bold cursor-pointer"
+            href="https://github.com/raymondjoseph02?tab=repositories"
+            className="text-green-300 nova_cut text-base font-bold cursor-pointer flex items-center justify-center gap-1.5 view_more_link"
           >
-            view more on github
+            <span> view more on github</span>
+            <span>
+              <FaArrowRight />
+            </span>
           </a>
         </div>
         <div className="grid grid-cols-1 gap-y-8 ">

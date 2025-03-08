@@ -94,3 +94,23 @@ header::before {
   border-radius: 24px;
   border: 0.5px solid rgba(255, 255, 255, 0.1);
 }
+.view_more_link:hover :nth-child(2) {
+  animation: arrowDirection 0.9s ease-in-out infinite;
+}
+@keyframes arrowDirection {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translate(10px);
+  }
+  50% {
+    transform: translate(20px);
+  }
+  75% {
+    transform: translate(10px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}

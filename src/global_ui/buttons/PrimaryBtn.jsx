@@ -1,48 +1,33 @@
 import PropTypes from "prop-types";
-import { cubicBezier, motion } from "framer-motion";
-const easing = cubicBezier(0.35, 0.17, 0.3, 0.86);
-
-const beforeAnimation = {
-  hidden: { scaleX: 0 }, // Start small and round
-  visible: {
-    scaleX: 3,
-  }, // Expand to full size
-};
+import { motion } from "framer-motion";
 
 const PrimaryBtn = ({ buttonType }) => {
   const btnType = {
     getInTouchBtn: {
       text: "Get In Touch",
-      classes: "bg-[#FFFFFF] text-[#161513] border-[0.32px] border-[#ffffff]",
-      action: () => {},
+      classes:
+        "flex gap-3 text-[#000000] bg-[#ffffff] px-2.5 py-1.5 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100",
+      link: "mailto:amraymondjoseph@gmail.com?subject=Hello Raymond&body=I would like to connect with you.",
     },
     downloadCvBtn: {
-      text: "Download CV",
+      text: "View Resume",
       classes:
-        "bg-[#000000] text-[#FFFFFF] border-[2px] border-[#ffffff] relative overflow-hidden",
-      link: "https://docs.google.com/document/d/15nqiZovoI_GUGg3iSMzxOjE52pcdPjNFEUCBhhBqMaY/edit?tab=t.0",
+        "flex gap-3 text-[#000000] bg-[#ffffff] px-2.5 py-1.5 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100",
+      link: "https://docs.google.com/document/d/15nqiZovoI_GUGg3iSMzxOjE52pcdPjNFEUCBhhBqMaY/edit?usp=sharing",
     },
   };
-  const { text, classes } = btnType[buttonType];
+  const { text, classes, link } = btnType[buttonType];
 
   return (
-    <motion.button
-      initial="hidden"
-      whileHover="visible"
-      className={`py-4 px-8 rounded-lg font-medium w-full md:font-semibold text-base md:text-[1.33rem] ${classes} group`}
-    >
-      <span className="relative z-30 group-hover:text-[#000000]">{text}</span>
-      {buttonType === "downloadCvBtn" && (
-        <motion.div
-          variants={beforeAnimation}
-          transition={{ duration: 0.98, ease: easing }}
-          style={{
-            originX: 0,
-          }}
-          className="absolute inset-0 z-0 w-full h-full bg-white"
-        />
-      )}
-    </motion.button>
+    <a href={link}>
+      <motion.button
+        initial="hidden"
+        whileHover="visible"
+        className={` rounded-lg font-medium w-full md:font-semibold  ${classes} group`}
+      >
+        <span className="relative z-30 group-hover:text-[#000000]">{text}</span>
+      </motion.button>
+    </a>
   );
 };
 
