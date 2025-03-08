@@ -15,7 +15,7 @@ const NavBar = () => {
           >
             RJ
           </a>
-          <div className=" hidden md:flex  bg-red-300  justify-center">
+          <div className=" hidden md:flex    justify-center">
             <ul className="flex gap-20 [&-li]:font-bold">
               {links.map((link, i) => (
                 <div
@@ -40,7 +40,7 @@ const NavBar = () => {
               ))}
             </ul>
           </div>
-          <div className="flex gap-6 bg-red-200">
+          <div className="flex gap-6 ">
             <div>
               <PrimaryBtn buttonType={"downloadCvBtn"}></PrimaryBtn>
             </div>
