@@ -53,7 +53,7 @@ const ProjectCard = ({
             {techStack.map((tech) => (
               <p
                 key={tech} // Better to use the actual value as key if possible
-                className="py-2 px-4 text-white rounded-md bg-[#ffffff12] shadow-md capitalize "
+                className="py-1.5 px-2.5 text-white rounded-md bg-[#ffffff12] shadow-md capitalize "
               >
                 {tech}
               </p>
@@ -66,7 +66,7 @@ const ProjectCard = ({
                 href={liveLink}
                 target="_blank"
                 rel="noreferrer"
-                className="text-sm lg:text-base flex gap-3 text-[#000000] bg-[#ffffff] px-2.5 py-1.5 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100 w-full  justify-center md:w-fit"
+                className="text-sm lg:text-base flex gap-3 text-[#000000] bg-[#ffffff] px-2.5 py-3 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100 w-full  justify-center md:w-fit"
               >
                 <CiGlobe className="size-5 " />
                 <span>View on Web</span>
@@ -77,7 +77,7 @@ const ProjectCard = ({
                 href={githubLink}
                 target="_blank"
                 rel="noreferrer"
-                className="flex gap-3 text-[#000000] bg-[#ffffff] px-2.5 py-1.5 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100 w-full justify-center md:w-fit"
+                className="flex gap-3 text-[#000000] bg-[#ffffff] px-2.5 py-3 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100 w-full justify-center md:w-fit"
               >
                 <FaGithub className="size-5 " />
                 <span>View on GitHub</span>

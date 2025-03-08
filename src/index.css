@@ -16,13 +16,7 @@
   font-family: "Tulpen One", serif;
   font-style: normal;
 }
-.mask {
-  mask-image: url("./assets/images/mask.svg");
-  background-color: red;
-  mask-size: 40px;
-  mask-repeat: no-repeat;
-  color: black;
-}
+
 .hover_animation::before {
   content: " ";
   position: absolute;
@@ -112,5 +106,10 @@ header::before {
   }
   100% {
     transform: translate(0px);
+  }
+}
+@media (max-width: 750px) {
+  header::before {
+    visibility: hidden;
   }
 }
