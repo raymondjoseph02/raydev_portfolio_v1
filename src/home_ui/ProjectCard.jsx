@@ -8,8 +8,6 @@ const ProjectCard = ({
   title,
   description,
   techStack, // Uncommented this prop
-  liveLink,
-  githubLink,
   links,
   id,
   imageUrl,
@@ -63,9 +61,8 @@ const ProjectCard = ({
           <div className="flex gap-4 flex-wrap  pt-6">
             {links.liveLink && (
               <a
-                href={liveLink}
+                href={links.liveLink}
                 target="_blank"
-                rel="noreferrer"
                 className="text-sm lg:text-base flex gap-3 text-[#000000] bg-[#ffffff] px-2.5 py-3 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100 w-full  justify-center md:w-fit"
               >
                 <CiGlobe className="size-5 " />
@@ -74,13 +71,18 @@ const ProjectCard = ({
             )}
             {links.githubLink && (
               <a
-                href={githubLink}
+                href={links.githubLink !== "private" ? links.githubLink : "#"}
                 target="_blank"
                 rel="noreferrer"
                 className="flex gap-3 text-[#000000] bg-[#ffffff] px-2.5 py-3 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100 w-full justify-center md:w-fit"
               >
-                <FaGithub className="size-5 " />
-                <span>View on GitHub</span>
+                <FaGithub className="size-5" />
+
+                {links.githubLink !== "private" ? (
+                  <span>View on GitHub</span>
+                ) : (
+                  <span>Private Repository</span>
+                )}
               </a>
             )}
           </div>

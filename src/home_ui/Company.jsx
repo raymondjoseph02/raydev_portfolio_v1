@@ -35,9 +35,7 @@ const Company = ({ logo, description, position, duration }) => {
             damping: 9,
             ease: "anticipate",
           }}
-          className={`font-normal text-sm ${
-            duration.includes("Present") ? "text-green-300" : " text-red-400"
-          }`}
+          className={`font-normal text-sm text-green-300`}
         >
           {duration}
         </motion.p>

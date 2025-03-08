@@ -5,31 +5,6 @@ import scaper_walkers from "./../assets/images/scape-walkers.png";
 export const projects = [
   {
     id: 1,
-    title: "Smart filing",
-    imageUrl: smart_filing_image,
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aperiam repellat vel assumenda alias nobis veniam totam architecto ratione autem, aliquid quae qui illo dolores quam nisi odio amet obcaecati.",
-    techStack: ["react", "tailwind", "javascript", "fomik", "Google Recaptcha"],
-    links: {
-      githubLink: "github.com",
-      liveLink: "Pay4me.netify.app",
-    },
-  },
-  {
-    id: 2,
-    title: "Pay4me Dashboard",
-    imageUrl: pay4me,
-
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aperiam repellat vel assumenda alias nobis veniam totam architecto ratione autem, aliquid quae qui illo dolores quam nisi odio amet obcaecati.",
-    techStack: ["react", "tailwind", "typescript", "framer motion"],
-    links: {
-      githubLink: "github.com",
-      liveLink: "Pay4me.netify.app",
-    },
-  },
-  {
-    id: 3,
     title: "Audiophile",
     imageUrl: audio_phile,
 
@@ -37,12 +12,25 @@ export const projects = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aperiam repellat vel assumenda alias nobis veniam totam architecto ratione autem, aliquid quae qui illo dolores quam nisi odio amet obcaecati.",
     techStack: ["html", "sass", "javascript"],
     links: {
-      githubLink: "github.com",
-      liveLink: "Pay4me.netify.app",
+      githubLink: "https://github.com/raymondjoseph02/audio-phile",
+      liveLink: "https://rayaudio-phile.netlify.app/",
     },
   },
   {
-    id: 4,
+    id: 2,
+    title: "Smart filing",
+    imageUrl: smart_filing_image,
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aperiam repellat vel assumenda alias nobis veniam totam architecto ratione autem, aliquid quae qui illo dolores quam nisi odio amet obcaecati.",
+    techStack: ["react", "tailwind", "javascript", "fomik", "Google Recaptcha"],
+    links: {
+      githubLink: "private",
+      liveLink: "https://smartfiling.com/",
+    },
+  },
+
+  {
+    id: 3,
     title: "scaper walkers",
     imageUrl: scaper_walkers,
 
@@ -50,7 +38,20 @@ export const projects = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aperiam repellat vel assumenda alias nobis veniam totam architecto ratione autem, aliquid quae qui illo dolores quam nisi odio amet obcaecati.",
     techStack: ["react", "tailwind", "typescript", "framer motion"],
     links: {
-      githubLink: "github.com",
+      githubLink: "https://github.com/raymondjoseph02/scapewalkers",
+      liveLink: "https://www.scapewalkers.com/",
+    },
+  },
+  {
+    id: 4,
+    title: "Pay4me Dashboard",
+    imageUrl: pay4me,
+
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aperiam repellat vel assumenda alias nobis veniam totam architecto ratione autem, aliquid quae qui illo dolores quam nisi odio amet obcaecati.",
+    techStack: ["react", "tailwind", "typescript", "framer motion"],
+    links: {
+      githubLink: "https://github.com/raymondjoseph02/pay4me",
       liveLink: "Pay4me.netify.app",
     },
   },

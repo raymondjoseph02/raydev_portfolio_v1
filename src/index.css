@@ -30,7 +30,7 @@
   background: linear-gradient(45deg, #ad00fe 0%, #00e0ee 100%);
   opacity: 0.15;
   filter: blur(137.6px);
-  animation: gradientAnimation 20s ease-in-out infinite;
+  animation: gradientAnimation 79s ease-in-out infinite;
 }
 header {
   position: relative;

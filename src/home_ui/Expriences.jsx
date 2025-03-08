@@ -1,7 +1,7 @@
 import Company from "./Company";
 import google_logo from "../assets/images/google-logo.png";
 import defifundr_logo from "../assets/images/defifundr.png";
-import smartFiling_logo from "../assets/images/Logo2.png";
+import smartFiling_logo from "../assets/images/mobile-logo.png";
 import { useRefContext } from "../context/RefContext";
 const companies = [
   {
