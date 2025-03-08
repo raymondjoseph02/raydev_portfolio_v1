@@ -27,7 +27,7 @@ const ProjectCard = ({
     <motion.div
       ref={cardRef}
       style={{ scaleX, transformOrigin: "center", top: `${90 * id}px` }}
-      className="bg-[#2A2A2A] rounded-[18px] grid grid-cols-1 md:grid-cols-2 overflow-hidden md:sticky  shadow-[rgba(0,0,0,0.2)_0px_-60px_40px_-7px] "
+      className="bg-[#2A2A2A] rounded-[18px] grid grid-cols-1 md:grid-cols-2 overflow-hidden lg:sticky  shadow-[rgba(0,0,0,0.2)_0px_-60px_40px_-7px] "
     >
       <div className="basis-1/2">
         <img
