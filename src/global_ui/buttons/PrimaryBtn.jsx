@@ -6,13 +6,13 @@ const PrimaryBtn = ({ buttonType }) => {
     getInTouchBtn: {
       text: "Get In Touch",
       classes:
-        "flex gap-3 text-[#000000] bg-[#ffffff] px-2.5 py-1.5 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100",
+        "flex gap-3 text-[#000000] bg-[#ffffff] justify-center px-2.5 py-1.5 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100",
       link: "mailto:amraymondjoseph@gmail.com?subject=Hello Raymond&body=I would like to connect with you.",
     },
     downloadCvBtn: {
       text: "View Resume",
       classes:
-        "flex gap-3 text-[#000000] bg-[#ffffff] px-2.5 py-1.5 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100",
+        "flex gap-3 text-[#000000] bg-[#ffffff] justify-center px-2.5 py-1.5 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100",
       link: "https://docs.google.com/document/d/15nqiZovoI_GUGg3iSMzxOjE52pcdPjNFEUCBhhBqMaY/edit?usp=sharing",
     },
   };

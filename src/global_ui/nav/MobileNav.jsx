@@ -2,12 +2,13 @@ import { FaEnvelope } from "react-icons/fa";
 import { useRefContext } from "../../context/RefContext";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import PrimaryBtn from "../buttons/PrimaryBtn";
 function MobileNav() {
   const { links, activeLink, isNavOpen, setIsNavOpen } = useRefContext();
 
   return (
     <div className="w-screen h-svh bg-[#27272A] pt-20 pb-6 px-8 flex flex-col justify-between">
-      <div className="">
+      <div className="space-y-40">
         <ul className="flex justify-between gap-8 lg:gap-20  [&-li]:font-bold flex-col">
           {links.map((link, i) => (
             <div
@@ -34,7 +35,16 @@ function MobileNav() {
             </div>
           ))}
         </ul>
+        <div className="space-y-6">
+          <div>
+            <PrimaryBtn buttonType={"downloadCvBtn"}></PrimaryBtn>
+          </div>
+          <div>
+            <PrimaryBtn buttonType={"getInTouchBtn"}></PrimaryBtn>
+          </div>
+        </div>
       </div>
+
       <div className="text-white flex flex-col justify-center items-center gap-5">
         <a
           href="mailto:amraymondjoseph@gmail.com"

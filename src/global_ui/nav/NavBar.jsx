@@ -6,7 +6,7 @@ const NavBar = () => {
   const { links, activeLink, isNavOpen, setIsNavOpen } = useRefContext();
 
   return (
-    <header className=" fixed w-screen z-[999] drop-shadow-lg min-h-10 flex items-center justify-center py-2 bg-[#27272A]  overflow-hidden">
+    <header className=" fixed w-screen z-[999] drop-shadow-lg min-h-10 flex items-center justify-center py-2 bg-[#27272A]">
       <nav className="w-full">
         <div className=" flex items-center justify-between  mx-auto container ">
           <a

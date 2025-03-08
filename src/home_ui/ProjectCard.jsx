@@ -38,7 +38,7 @@ const ProjectCard = ({
       </div>
 
       <div className="px-4 md:px-8 py-10 basis-1/2 space-y-10">
-        <div className="space-y-6">
+        <div className="space-y-3">
           <h4 className="sm:text-2xl lg:text-3xl sm:font-semibold lg:font-bold text-white">
             {title}
           </h4>
