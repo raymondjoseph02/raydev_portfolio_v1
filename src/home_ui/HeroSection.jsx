@@ -9,18 +9,19 @@ const HeroSection = () => {
         <div className=" xl:w-[60%] relative z-20 flex justify-center items-center overflow-hidden ">
           <div className="hero-sec-text-before bg-transparent" />
 
-          <div className="relative z-20 flex flex-col gap-8 p-5 md:p-10 rounded-3xl    size-[99.85%]  bg-transparent">
+          <div className="relative z-20 flex flex-col gap-8 p-5 md:px-10 md:py-20 rounded-3xl    size-[99.85%]  bg-transparent">
             <div className="flex justify-between flex-col gap-3">
               <p className="text-base font-medium text-[#efeded] sm:text-xl">
-                Hi, I&#39;m Raymond{" "}
+                Hi, I&#39;m Raymond.
               </p>
             </div>
             <h1 className="md:text-[2rem] text-3xl lg:text-[3.5rem] md:leading-[67.2px] md:max-w-[20ch] text-white font-semibold">
-              Front-End Solutions for Seamless Experiences{" "}
+              🚀 Crafting Seamless Front-End Experiences
             </h1>
-            <p className="text-[#b6b5b5] text-base md:max-w-[60ch]">
-              Building seamless, user-centric experiences that blend innovation,
-              performance, and scalability
+            <p className="text-[#b6b5b5] text-base md:max-w-[60ch] pb-10">
+              I build high-performance, user-centric web solutions that blend
+              innovation, speed, and scalability. Let’s build interfaces that
+              feel as good as they
             </p>
             <ExperienceWith />
           </div>

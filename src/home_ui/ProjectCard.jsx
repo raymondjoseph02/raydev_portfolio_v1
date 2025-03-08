@@ -13,6 +13,7 @@ const ProjectCard = ({
   githubLink,
   links,
   id,
+  imageUrl,
 }) => {
   const cardRef = useRef(null);
 
@@ -31,7 +32,7 @@ const ProjectCard = ({
     >
       <div className="basis-1/2">
         <img
-          src={pay4me_cover}
+          src={imageUrl}
           alt="Pay4Me Cover"
           className="object-cover w-full h-full"
         />
@@ -93,6 +94,7 @@ const ProjectCard = ({
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   techStack: PropTypes.array.isRequired,
   links: PropTypes.array.isRequired,
