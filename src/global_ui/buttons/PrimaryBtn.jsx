@@ -29,7 +29,7 @@ const PrimaryBtn = ({ buttonType }) => {
     <motion.button
       initial="hidden"
       whileHover="visible"
-      className={`py-4 px-8 rounded-lg font-medium md:font-semibold text-base md:text-[1.33rem] ${classes} group`}
+      className={`py-4 px-8 rounded-lg font-medium w-full md:font-semibold text-base md:text-[1.33rem] ${classes} group`}
     >
       <span className="relative z-30 group-hover:text-[#000000]">{text}</span>
       {buttonType === "downloadCvBtn" && (
@@ -39,7 +39,7 @@ const PrimaryBtn = ({ buttonType }) => {
           style={{
             originX: 0,
           }}
-          className="absolute inset-0 w-full h-full bg-white z-0"
+          className="absolute inset-0 z-0 w-full h-full bg-white"
         />
       )}
     </motion.button>

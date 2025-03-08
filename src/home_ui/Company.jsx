@@ -3,18 +3,18 @@ import propTypes from "prop-types";
 
 const Company = ({ logo, description, position, duration }) => {
   return (
-    <div className=" w-ful flex flex-col gap-6">
-      <motion.div className="flex justify-between lg:items-center gap-4 w-full flex-col lg:flex-row">
-        <div className="flex items-center  gap-4 ">
-          <div>
-            <img src={logo} alt="" />
+    <div className="flex flex-col gap-6 w-ful">
+      <motion.div className="flex flex-col justify-between w-full gap-4 lg:items-center lg:flex-row border-b border-b-[#ffffff20]">
+        <div className="flex items-center gap-4 ">
+          <div className="flex items-center justify-center w-12 h-12 overflow-hidden lg:w-16 lg:h-16 rounded-xl">
+            <img src={logo} alt="" className="object-cover" />
           </div>
           <motion.p
             initial={{ x: 30, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.3, ease: "anticipate" }}
             viewport={{ amount: 0.23 }}
-            className="md:text-[1.35rem] text-white font-bold text-base"
+            className="md:text-[1.35rem] text-white font-semibold md:font-bold text-base text-balance"
           >
             {position}
           </motion.p>
@@ -57,7 +57,7 @@ const Company = ({ logo, description, position, duration }) => {
             delay: 0.207,
             ease: "linear",
           }}
-          className="text-[#8491A0] leading-[150%] font-normal text-[0.90rem]"
+          className="text-[#8491A0] leading-[150%] tracking-wide font-normal text-[0.90rem] md:max-w-[115ch]"
         >
           {description}
         </motion.p>

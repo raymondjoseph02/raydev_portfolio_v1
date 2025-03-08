@@ -1,45 +1,103 @@
-import { FaArrowRight } from "react-icons/fa";
 import pay4me_cover from "../assets/images/Pay4me Cover.png";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { FaGithub } from "react-icons/fa6";
+import { CiGlobe } from "react-icons/ci";
+import PropTypes from "prop-types";
 
-const ProjectCard = () => {
+const ProjectCard = ({
+  title,
+  description,
+  techStack, // Uncommented this prop
+  liveLink,
+  githubLink,
+  links,
+  id,
+}) => {
   const cardRef = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: cardRef,
-    offset: ["start end", "end center"], // Adjusts animation trigger points
+    offset: ["start end", "end center"],
   });
 
-  const scaleX = useTransform(scrollYProgress, [0, 1], [1, 0.89]); // Smooth scaling
-
-  useEffect(() => {
-    console.log(scrollYProgress.current);
-  }, [scrollYProgress.current]);
+  const scaleX = useTransform(scrollYProgress, [0, 1], [1, 0.9]);
 
   return (
     <motion.div
       ref={cardRef}
-      style={{ scaleX, transformOrigin: "center" }}
-      className="bg-[#2A2A2A] rounded-[18px] overflow-hidden "
+      style={{ scaleX, transformOrigin: "center", top: `${90 * id}px` }}
+      className="bg-[#2A2A2A] rounded-[18px] grid grid-cols-1 md:grid-cols-2 overflow-hidden md:sticky  shadow-[rgba(265,265,265,0.09)_0px_-2px_12px_0px] "
     >
-      <div>
-        <img src={pay4me_cover} alt="Pay4Me Cover" />
+      <div className="basis-1/2">
+        <img
+          src={pay4me_cover}
+          alt="Pay4Me Cover"
+          className="object-cover w-full h-full"
+        />
       </div>
-      <div className="px-6 py-3 flex justify-between items-center hover:bg-gradient-to-r group from-[#ad00fe] to-[#00e0ee] transition-colors ease-linear duration-500 cursor-pointer ">
-        <div>
-          <p className="text-[#C5C5C5] text-[0.6rem] leading-[19px]">
-            CLICK HERE TO VISIT
-          </p>
-          <p className="text-[#FFFFFF] text-[1.18rem] font-extrabold uppercase leading-[20px]">
-            pay4me dashboard
-          </p>
+
+      <div className="px-8 py-10 basis-1/2 space-y-10">
+        <div className="space-y-6">
+          <h4 className="sm:text-2xl lg:text-3xl sm:font-semibold lg:font-bold text-white">
+            {title}
+          </h4>
+          <p className="text-base sm:text-lg text-[#ffffff70]">{description}</p>
         </div>
-        <div>
-          <FaArrowRight className="text-white -rotate-45 group-hover:rotate-[5deg] transition-transform ease-linear duration-100" />
+
+        <div className="space-y-4">
+          <p className="text-lg font-semibold nova_cut text-[#dcd5d5]">
+            Technologies used
+          </p>
+          <div className="flex flex-wrap gap-3 sm:gap-6">
+            {techStack.map((tech) => (
+              <p
+                key={tech} // Better to use the actual value as key if possible
+                className="py-2 px-4 text-white rounded-md bg-[#ffffff12] shadow-md capitalize nova_cut"
+              >
+                {tech}
+              </p>
+            ))}
+          </div>
+
+          <div className="flex gap-4 flex-wrap  pt-6">
+            {links.liveLink && (
+              <a
+                href={liveLink}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm lg:text-base flex gap-3 text-[#000000] bg-[#ffffff] px-2.5 py-1.5 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100"
+              >
+                <CiGlobe className="size-5 " />
+                <span>View on Web</span>
+              </a>
+            )}
+            {links.githubLink && (
+              <a
+                href={githubLink}
+                target="_blank"
+                rel="noreferrer"
+                className="flex gap-3 text-[#000000] bg-[#ffffff] px-2.5 py-1.5 rounded-md hover:bg-[#ffffffa1] group cursor-pointer transition-colors ease-in-out duration-100"
+              >
+                <FaGithub className="size-5 " />
+                <span>View on GitHub</span>
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </motion.div>
   );
+};
+
+ProjectCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  techStack: PropTypes.array.isRequired,
+  links: PropTypes.array.isRequired,
+  liveLink: PropTypes.string,
+  githubLink: PropTypes.string,
 };
 
 export default ProjectCard;

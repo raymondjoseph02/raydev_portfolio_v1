@@ -2,66 +2,55 @@ import { FaHtml5, FaJs, FaNode, FaReact } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { PiFramerLogoFill } from "react-icons/pi";
 import { SiTypescript } from "react-icons/si";
-import { useState } from "react";
-import { motion } from "framer-motion";
 const ExperienceWith = () => {
-  const [isHoverTool, setIsHoverTool] = useState();
-  const [isActive, setIsActive] = useState(false);
-  const handleOnHover = (name) => {
-    setIsHoverTool(name);
-    setIsActive(true);
-  };
-  const handleOnMouseLeave = () => {
-    setIsActive(false);
-  };
   const tools = [
     {
       name: "javascript",
       icon: (
-        <FaJs className="text-[#90908F] size-[2.93rem] md:size-[3rem] hover:text-[#F0DB4F] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
+        <FaJs className="text-[#90908F] size-[2rem] md:size-[2.3rem] hover:text-[#F0DB4F] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
       ),
     },
     {
       name: "React",
       icon: (
-        <FaReact className="text-[#90908F] size-[2.93rem] md:size-[3rem] hover:text-[#61DBFB] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
+        <FaReact className="text-[#90908F] size-[2rem] md:size-[2.3rem] hover:text-[#61DBFB] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
       ),
     },
     {
       name: "Node",
       icon: (
-        <FaNode className="text-[#90908F] size-[2.93rem] md:size-[3rem] hover:text-[#68A063] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
+        <FaNode className="text-[#90908F] size-[2rem] md:size-[2.3rem] hover:text-[#68A063] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
       ),
     },
     {
       name: "Html",
       icon: (
-        <FaHtml5 className="text-[#90908F] size-[2.93rem] md:size-[3rem] hover:text-[#e34c26] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
+        <FaHtml5 className="text-[#90908F] size-[2rem] md:size-[2.3rem] hover:text-[#e34c26] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
       ),
     },
 
     {
       name: "Tailwind css",
       icon: (
-        <RiTailwindCssFill className="text-[#90908F] size-[2.93rem] md:size-[3rem] hover:text-[#06b6d4] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
+        <RiTailwindCssFill className="text-[#90908F] size-[2rem] md:size-[2.3rem] hover:text-[#06b6d4] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
       ),
     },
     {
       name: "Framer Motion",
       icon: (
-        <PiFramerLogoFill className="text-[#90908F] size-[2.93rem] md:size-[3rem] hover:text-[#F0DB4F] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
+        <PiFramerLogoFill className="text-[#90908F] size-[2rem] md:size-[2.3rem] hover:text-[#F0DB4F] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
       ),
     },
     {
       name: "Typescript",
       icon: (
-        <SiTypescript className="text-[#90908F] size-[2.93rem] md:size-[3rem] hover:text-[#007acc] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
+        <SiTypescript className="text-[#90908F] size-[2rem] md:size-[2.3rem] hover:text-[#007acc] rounded-md transition-colors ease-in-out duration-150 cursor-pointer" />
       ),
     },
   ];
   return (
     <div className="flex flex-col gap-8 items-center justify-center">
-      <div className="h-7  overflow-hidden relative w-full text-center">
+      {/* <div className="h-7  overflow-hidden relative w-full text-center">
         <motion.h3
           initial={{ y: 0 }}
           animate={isActive ? { y: -50 } : { y: 0 }}
@@ -92,17 +81,12 @@ const ExperienceWith = () => {
         >
           {isHoverTool}
         </motion.h3>
-      </div>
-      <div className="flex gap-5 md:gap-12 lg:gap-16 flex-wrap items-center justify-center">
+      </div> */}
+      <div className="flex w-full items-center justify-between">
         {tools.map((tool, i) => (
-          <div
-            onMouseEnter={() => handleOnHover(tool.name)}
-            onMouseLeave={handleOnMouseLeave}
-            key={i}
-            className="flex flex-col items-center justify-center"
-          >
+          <div key={i} className="flex flex-col items-center justify-center">
             {tool.icon}
-            <p className="text-[#ffffff] capitalize">{tool.name}</p>
+            {/* <p className="text-[#ffffff] capitalize">{tool.name}</p> */}
           </div>
         ))}
       </div>

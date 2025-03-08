@@ -23,9 +23,9 @@ const App = () => {
   return (
     <RefProvider>
       <Theme>
-        <div className="bg-[#161618]">
+        <div className="bg-[#161618]  !w-full">
           <NavBar />
-          <main className="md:px-[10.23rem] px-5 lg:px-[19.68rem]">
+          <main className="container  w-full">
             <HeroSection />
             <Projects />
             <Expriences />

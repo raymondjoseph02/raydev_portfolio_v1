@@ -6,7 +6,7 @@ function MobileNav() {
   const { links, activeLink, isNavOpen, setIsNavOpen } = useRefContext();
 
   return (
-    <div className="size-full bg-[#27272A] pt-20 pb-6 px-8 flex flex-col justify-between">
+    <div className="w-screen h-svh bg-[#27272A] pt-20 pb-6 px-8 flex flex-col justify-between">
       <div className="">
         <ul className="flex justify-between gap-8 lg:gap-20  [&-li]:font-bold flex-col">
           {links.map((link, i) => (
