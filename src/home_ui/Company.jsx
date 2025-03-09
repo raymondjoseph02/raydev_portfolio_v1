@@ -5,9 +5,9 @@ const Company = ({ logo, description, position, duration }) => {
   return (
     <div className="flex flex-col gap-6 w-ful">
       <motion.div className="flex flex-col justify-between w-full gap-4 lg:items-center lg:flex-row border-b border-b-[#ffffff20]">
-        <div className="flex items-center gap-4 ">
-          <div className="flex items-center justify-center w-12 h-12 overflow-hidden lg:w-16 lg:h-16 rounded-xl">
-            <img src={logo} alt="" className="object-cover" />
+        <div className="flex items-center gap-4 pb-1">
+          <div className="flex items-center justify-center w-12 h-12 overflow-hidden lg:w-16 lg:h-16 rounded-xl bg-[#322f2f62]">
+            {logo !== "" && <img src={logo} alt="" className="object-cover" />}
           </div>
           <motion.p
             initial={{ x: 30, opacity: 0 }}

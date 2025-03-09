@@ -11,7 +11,7 @@ const NavBar = () => {
         <div className=" flex items-center justify-between  mx-auto container ">
           <a
             href="/"
-            className="text-2xl tulpen_one text-white font-semibold rounded-full size-14 flex items-center justify-center border-[#4b4848] border"
+            className="text-2xl tulpen_one text-white font-semibold rounded-full p-3 flex items-center justify-center border-[#4b4848] border"
           >
             RJ
           </a>

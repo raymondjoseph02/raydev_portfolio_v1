@@ -9,8 +9,8 @@ export const projects = [
     imageUrl: audio_phile,
 
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aperiam repellat vel assumenda alias nobis veniam totam architecto ratione autem, aliquid quae qui illo dolores quam nisi odio amet obcaecati.",
-    techStack: ["html", "sass", "javascript"],
+      "Built an e-commerce platform focused on high-end audio products. Developed responsive pages for product listings and details using JavaScript and Firebase for data management. Implemented features like user authentication and dynamic cart functionality to enhance the user shopping experience.",
+    techStack: ["html", "sass", "javascript", "Firebase"],
     links: {
       githubLink: "https://github.com/raymondjoseph02/audio-phile",
       liveLink: "https://rayaudio-phile.netlify.app/",
@@ -21,7 +21,7 @@ export const projects = [
     title: "Smart filing",
     imageUrl: smart_filing_image,
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aperiam repellat vel assumenda alias nobis veniam totam architecto ratione autem, aliquid quae qui illo dolores quam nisi odio amet obcaecati.",
+      "Redesigned and developed the Landing, Contact Us, Login/Sign-Up, and Terms & Conditions pages for Smart Filing. Focused on creating clean, responsive, and user-friendly interfaces using React, Tailwind CSS, and JavaScript, resulting in a modernized and cohesive user experience.",
     techStack: ["react", "tailwind", "javascript", "fomik", "Google Recaptcha"],
     links: {
       githubLink: "private",
@@ -35,7 +35,7 @@ export const projects = [
     imageUrl: scaper_walkers,
 
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aperiam repellat vel assumenda alias nobis veniam totam architecto ratione autem, aliquid quae qui illo dolores quam nisi odio amet obcaecati.",
+      "Designed and developed a responsive landing page from scratch without any prior design reference. Focused on clean UI, intuitive layout, and optimized performance using React, Tailwind CSS, and Framer Motion for smooth interactions.",
     techStack: ["react", "tailwind", "typescript", "framer motion"],
     links: {
       githubLink: "https://github.com/raymondjoseph02/scapewalkers",
@@ -48,7 +48,7 @@ export const projects = [
     imageUrl: pay4me,
 
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aperiam repellat vel assumenda alias nobis veniam totam architecto ratione autem, aliquid quae qui illo dolores quam nisi odio amet obcaecati.",
+      "A visually polished single-page website crafted to showcase refined attention to detail, modern aesthetics, and seamless user experience. This project demonstrates precision in layout, typography, and responsive design, with a focus on clean UI and subtle interactions. Built with React, Tailwind CSS, and Framer Motion to highlight smooth transitions and engaging visual appeal.",
     techStack: ["react", "tailwind", "typescript", "framer motion"],
     links: {
       githubLink: "https://github.com/raymondjoseph02/pay4me",
